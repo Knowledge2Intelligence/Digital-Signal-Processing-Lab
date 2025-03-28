@@ -1,0 +1,23 @@
+%Program for computing crosscorrelation 
+clc;
+clear all;
+close all; 
+x=input('Enter X[n]:'); 
+h=input('enter h[n]:'); 
+y= xcorr(x,h); 
+subplot(2,2,1); 
+stem(x); 
+xlabel('time'); 
+ylabel('amplitude'); 
+title('input sequence x[n]'); 
+subplot(2,2,2); 
+stem(h); 
+xlabel('time'); 
+ylabel('amplitude'); 
+title('impluse resonse of the system h[n]'); 
+subplot(2,2,3); 
+stem(y); 
+xlabel('time'); 
+ylabel('amplitude'); 
+title('crosscorrelation '); 
+disp(y); 
